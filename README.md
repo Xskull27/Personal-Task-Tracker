@@ -31,8 +31,8 @@ https://personal-task-tracker-nu.vercel.app/
 
 
 ## 🖼 Screenshots
-![Task Tracker Screenshot 1](![image](https://github.com/user-attachments/assets/671b3bf5-d35b-4fb5-b6b1-3bd08b814c69)
-)
+![Task Tracker Screenshot 1]("C:\Users\priya\OneDrive\Pictures\Screenshots\Screenshot 2025-07-03 215001.png")
+
 ![Task Tracker Screenshot 2](screenshots/screenshot2.png)
 
 ---
