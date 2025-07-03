@@ -27,7 +27,8 @@ A modern, visually appealing React app to manage your personal tasks. Features p
 
 
 ## 🔗 Live Demo
-[https://your-live-demo-url.com](https://your-live-demo-url.com)
+(personal-task-tracker-nu.vercel.app)
+
 
 ## 🖼 Screenshots
 ![Task Tracker Screenshot 1](screenshots/screenshot1.png)
