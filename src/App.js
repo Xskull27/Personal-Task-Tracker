@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import Login from "./components/Login";
 import TaskForm from "./components/TaskForm";
@@ -35,8 +34,31 @@ function App() {
   const completedCount = tasks.filter(t => t.completed).length;
   const pendingCount = tasks.filter(t => !t.completed).length;
 
+  // Get today's date and day in a readable format
+  const [today, setToday] = useState(() => {
+    const d = new Date();
+    return d.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  });
+
+  useEffect(() => {
+    // Update date at midnight
+    const interval = setInterval(() => {
+      const d = new Date();
+      setToday(d.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+    }, 60 * 1000); 
+    return () => clearInterval(interval);
+  }, []);
+
   return user ? (
     <div className={`container ${darkMode ? "dark" : ""}`}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', background: 'transparent', padding: '0.5rem 0.8rem 0 0', position: 'relative' }}>
+        <div className="date-header" style={{ fontWeight: 600, fontSize: '1.1rem', color: '#2563eb', letterSpacing: '0.04em' }}>
+          <span role="img" aria-label="calendar" style={{ marginRight: 6 }}>📅</span>{today}
+        </div>
+      </div>
+      <header className="app-header">
+        <h1>PERSONAL TASK TRACKER</h1>
+      </header>
       <div className="top-bar">
         <h1>Welcome, {user}!</h1>
         <button onClick={() => setDarkMode(!darkMode)} className="toggle-mode">
@@ -77,5 +99,4 @@ function App() {
 export default App;
 
 
-// (All other components remain unchanged)
 

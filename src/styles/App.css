@@ -317,7 +317,39 @@ html, body {
 }
 
 
-/* ...undoing changes: restoring previous state if needed... */
+.app-header {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 1.2rem 0 1.2rem 0;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 12px 0 rgba(37,99,235,0.10);
+  margin-bottom: 1.5rem;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.date-header {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2563eb;
+  letter-spacing: 0.04em;
+  background: transparent;
+  margin-bottom: 0.2rem;
+  text-align: right;
+}
+
+
 .container.dark .toggle-mode {
   background: linear-gradient(90deg, #3a3f47 0%, #232526 100%) !important;
   color: #fff !important;
